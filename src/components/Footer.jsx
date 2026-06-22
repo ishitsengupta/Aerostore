@@ -29,7 +29,7 @@ export default function Footer() {
 
           {/* Socials / Legal */}
           <div>
-            <h4 className="text-white font-bold mb-4">Legal</h4>
+            <h4 className="text-slate-800 font-bold mb-4">Legal</h4>
             <ul className="flex flex-col gap-2">
               <li><a href="#" className="text-slate-500 hover:text-[#5EEAD4] transition-colors">Privacy Policy</a></li>
               <li><a href="#" className="text-slate-500 hover:text-[#5EEAD4] transition-colors">Terms of Service</a></li>
