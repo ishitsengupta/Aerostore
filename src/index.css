@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    /* Bright background and dark slate text */
+    @apply bg-[#F4F7FB] text-[#1E293B] font-sans antialiased min-h-screen overflow-x-hidden relative;
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    /* Frosty white glass with a very soft shadow */
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.04);
+  }
+}
+
+/* Signature Gradient Blobs */
+.blob {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(100px);
+  z-index: -1;
+  opacity: 0.4; /* Increased opacity slightly for light mode */
+  animation: float 10s infinite ease-in-out alternate;
+}
+
+.blob-1 {
+  width: 400px;
+  height: 400px;
+  background: #7C9CFF;
+  top: -100px;
+  left: -100px;
+}
+
+.blob-2 {
+  width: 500px;
+  height: 500px;
+  background: #5EEAD4;
+  bottom: -150px;
+  right: -100px;
+  animation-delay: 2s;
+}
+
+@keyframes float {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(30px, 50px) scale(1.1); }
+}
